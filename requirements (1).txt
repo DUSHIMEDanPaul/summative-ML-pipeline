@@ -1,0 +1,21 @@
+# Core data handling
+numpy>=1.26,<2.0
+pandas>=2.1
+
+# Traditional ML
+scikit-learn>=1.4
+
+# Deep learning
+tensorflow>=2.16
+
+# Visualization
+matplotlib>=3.8
+seaborn>=0.13
+
+# Notebook environment
+jupyter>=1.0
+ipykernel>=6.29
+
+# Reading the .xls source file from UCI
+xlrd>=2.0
+openpyxl>=3.1
