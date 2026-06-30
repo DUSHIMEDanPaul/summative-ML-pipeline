@@ -1,0 +1,9 @@
+Experiment,Approach,Hyperparameters,Split,Accuracy,Precision,Recall,F1,ROC_AUC,PR_AUC,Notes
+HistGradientBoosting (tuned),Traditional ML,"{'max_leaf_nodes': 15, 'max_iter': 200, 'learning_rate': 0.05, 'l2_regularization': 1.0}",test,0.7564,0.4629,0.6312,0.5341,0.7771,0.5575,"RandomizedSearchCV x12, ROC-AUC"
+HistGradientBoosting,Traditional ML,"lr=0.1, max_iter=300, balanced",test,0.7512,0.4547,0.6252,0.5265,0.7722,0.5513,Boosted trees baseline
+DL-Seq baseline,Deep Learning,"units=(64,32), dropout=0, lr=1e-3, no cw",test,0.8148,0.641,0.3703,0.4694,0.7654,0.5365,Plain MLP
+RandomForest,Traditional ML,"n_estimators=300, class_weight=balanced",test,0.8109,0.6377,0.3371,0.441,0.7594,0.5256,Bagged trees
+DL-Functional +BN,Deep Learning,"units=(128,64,32), dropout=0.3, BatchNorm, lr=1e-3, cw",test,0.7472,0.4476,0.6086,0.5158,0.7587,0.5242,
+LogisticRegression,Traditional ML,"C=1.0, class_weight=balanced",test,0.7469,0.4464,0.5995,0.5117,0.7537,0.5134,Linear baseline
+DL-Seq +dropout +cw,Deep Learning,"units=(64,32), dropout=0.3, lr=1e-3, cw",test,0.7427,0.4412,0.6109,0.5123,0.7404,0.5091,
+DL-Seq deeper lr=3e-4,Deep Learning,"units=(128,64,32), dropout=0.3, lr=3e-4, l2=1e-4, cw",test,0.721,0.4084,0.5814,0.4798,0.7056,0.486,
